@@ -19,6 +19,9 @@ public class Address implements Comparable<Address>{
     private String city;
     @Column(nullable = false)
     private String zipCode;
+
+    @OneToOne(mappedBy = "address")
+    private Customer customer;
     @Override
     public int compareTo(Address otherAddress) {
         int result = this.street.compareTo(otherAddress.getStreet());

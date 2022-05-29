@@ -24,6 +24,10 @@ public class Customer implements Comparable<Customer>{
     @Column(nullable = true, unique = true)
     private String email;
 
+    @OneToOne(optional = false)
+    @JoinColumn(name = "address_id")
+    private Address address;
+
     @Override
     public int compareTo(Customer otherCustomer) {
         int result = this.fName.compareTo(otherCustomer.getFName());
