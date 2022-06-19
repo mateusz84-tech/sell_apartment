@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name="apartments")
 @NoArgsConstructor
-@AllArgsConstructor @ToString @EqualsAndHashCode
+@ToString @EqualsAndHashCode
 public class Apartment implements Comparable<Apartment>{
 
     @Id
@@ -41,7 +41,6 @@ public class Apartment implements Comparable<Apartment>{
     @Size(min = 0, max = 10, message = "Dopuszczalna wartość 0 - 10")
     private Short floorLevel;
     @NotNull
-    @Access(AccessType.PROPERTY)
     @Column(name = "IS_FREE")
     private Boolean isFree;
     @NotNull
