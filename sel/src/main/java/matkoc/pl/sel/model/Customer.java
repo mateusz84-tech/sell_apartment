@@ -36,7 +36,7 @@ public class Customer implements Comparable<Customer>{
     private String email;
 
     @OneToOne(optional = false)
-    @JoinColumn(name = "address_id")
+    @JoinColumn(name = "ID_ADDRESS")
     @Access(AccessType.PROPERTY)
     private Address address;
 
